@@ -1,0 +1,12 @@
+[MERGING]
+
+# The "groups" key specifies the path to the file giving the ordered
+# list of group files to use in a merge.
+groups = groups1.txt
+
+[MAPPING]
+
+# Each catalogue output is specified here as a file path key and an
+# output file path value.
+mapping1.txt = catalogue1.txt
+mapping2.txt = catalogue2.txt
