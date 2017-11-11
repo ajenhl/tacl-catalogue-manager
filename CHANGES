@@ -1,0 +1,8 @@
+1.0.1  2017-11-12  Jamie Norrish  <jamie@artefact.org.nz>
+
+  * Explicitly use UTF-8 encoding when opening files.
+
+
+1.0.0  2017-11-04  Jamie Norrish  <jamie@artefact.org.nz>
+
+  * Initial release.

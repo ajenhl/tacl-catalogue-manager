@@ -8,7 +8,7 @@ with open('README.rst') as fh:
 
 setup(
     name='tacl-catalogue-manager',
-    version='1.0.0',
+    version='1.0.1',
     description='Manager for creating TACL catalogue files',
     long_description=long_description,
     author='Jamie Norrish',
@@ -20,8 +20,11 @@ setup(
             'tcm=tcm.command:main',
         ],
     },
+    license='GPLv3+',
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Programming Language :: Python :: 3',
     ],
