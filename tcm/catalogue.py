@@ -21,7 +21,7 @@ class Catalogue:
         """
         report = []
         group = os.path.basename(path)
-        with open(path) as fh:
+        with open(path, encoding='utf-8') as fh:
             for line in fh:
                 work = line.strip()
                 if work in self._data:
@@ -44,7 +44,7 @@ class Catalogue:
         :type mapping: `collections.OrderedDict`
 
         """
-        with open(path, 'w', newline='') as fh:
+        with open(path, 'w', encoding='utf-8', newline='') as fh:
             writer = csv.writer(fh, delimiter=' ')
             # This is an inefficient approach, but the number of
             # values in the innermost loop will never be enough for

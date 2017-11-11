@@ -75,7 +75,7 @@ class Controller:
 
         """
         # QAZ: handle exception when there is no file/unreadable file/etc.
-        with open(os.path.join(self.base_path, path)) as fh:
+        with open(os.path.join(self.base_path, path), encoding='utf-8') as fh:
             groups = [line.strip() for line in fh]
         return groups
 
@@ -89,7 +89,7 @@ class Controller:
         """
         mapping = OrderedDict()
         # QAZ: handle exception when there is no file/unreadable file/etc.
-        with open(path) as fh:
+        with open(path, encoding='utf-8') as fh:
             for line in fh:
                 parts = line.strip().split(maxsplit=1)
                 if len(parts) == 2:
