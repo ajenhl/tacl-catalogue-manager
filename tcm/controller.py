@@ -1,6 +1,6 @@
 from collections import OrderedDict
 import configparser
-import os.path
+import os
 
 from .catalogue import Catalogue
 
@@ -25,8 +25,8 @@ class Controller:
         return self._base_path
 
     def generate_catalogues(self, output_base_path):
-        """Writes catalogues to `base_path` using the groups and mappings
-        defined in the loaded control file.
+        """Writes catalogues to `output_base_path` using the groups and
+        mappings defined in the loaded control file.
 
         :param output_base_path: base path to save catalogue files to
         :type output_base_path: `str`
@@ -35,6 +35,8 @@ class Controller:
         # QAZ: handle case when self._groups_path is None.
         # QAZ: handle case when self._mappings is None.
         # QAZ: handle exceptions.
+        if not os.path.exists(output_base_path):
+            os.makedirs(output_base_path, exist_ok=True)
         catalogue = Catalogue()
         groups = self.load_groups(self.groups_path)
         report = []

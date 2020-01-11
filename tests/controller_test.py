@@ -17,10 +17,11 @@ class ControllerTestCase (unittest.TestCase):
         controller.load_control(os.path.join(
             self._data_dir, 'control1.txt'))
         with tempfile.TemporaryDirectory() as temp_dir:
-            controller.generate_catalogues(temp_dir)
-            with open(os.path.join(temp_dir, 'catalogue1.txt')) as fh:
+            save_dir = os.path.join(temp_dir, 'output')
+            controller.generate_catalogues(save_dir)
+            with open(os.path.join(save_dir, 'catalogue1.txt')) as fh:
                 actual_content1 = fh.readlines()
-            with open(os.path.join(temp_dir, 'catalogue2.txt')) as fh:
+            with open(os.path.join(save_dir, 'catalogue2.txt')) as fh:
                 actual_content2 = fh.readlines()
         expected_content1 = [
             'T3 label1\n',
