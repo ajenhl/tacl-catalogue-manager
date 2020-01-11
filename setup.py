@@ -8,7 +8,7 @@ with open('README.rst') as fh:
 
 setup(
     name='tacl-catalogue-manager',
-    version='1.0.1',
+    version='1.0.2',
     description='Manager for creating TACL catalogue files',
     long_description=long_description,
     author='Jamie Norrish',

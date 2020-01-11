@@ -1,3 +1,9 @@
+1.0.2  2020-01-12  Jamie Norrish  <jamie@artefact.org.nz>
+
+  * Added further documentation of the tcm command.
+  * Added support for saving catalogues into a new directory.
+
+
 1.0.1  2017-11-12  Jamie Norrish  <jamie@artefact.org.nz>
 
   * Explicitly use UTF-8 encoding when opening files.
