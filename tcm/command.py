@@ -10,6 +10,17 @@ DESCRIPTION = '''\
     Merges multiple lists of TACL works together in a specified order,
     and outputs one or more catalogue files using supplied labels.'''
 EPILOG = '''\
+
+This program is designed to facilitate the generation of TACL
+catalogue files from pre-created categories of works. The user creates
+files grouping works into categories, along with a groups file that
+provides the precedence order of those categories. From these the
+program generates a final listing of which works belong to which
+category, on the basis of which category each work first appears
+in. This allows the user to list a work within multiple categories
+(such as chronological periods and authorship where known) and have
+the groups file specify which categories are used and in which order.
+
 FILES
 
 This program makes use of several types of file:
@@ -18,7 +29,7 @@ This program makes use of several types of file:
   group name is the filename (basename only, not the full path). The
   content is one or more work names, one per line.
 
-* Groups files: These specify the individual group files to be merged
+* Groups file: This specifies the individual group files to be merged
   together and the order in which this merge occurs. The content is
   one or more paths to group files, one per line.
 
